@@ -27,19 +27,19 @@ HOW TO EXTEND:
 ```particle_base.h``` contains declarations of all necessary functions for a derived class to have. These do include setter and getter functions (e.g ```get_id()```), which ideally should be setters and getters of data members in any derived class. The expected nature of the functions should otherwise be self-evident: ```dump_info()``` prints information about the particle to the screen, ```get_type()``` returns a human-readable description, usually the particle name. The main choice the user must make to extend this class is to pick a positive integer that is used as the ID for that particle type (```m_id```), which must be unoccupied by any other particle. 
 
 By default, the occupied ID's are:
-0 : Default type
-1 : Proton
-2 : Neutron
-3 : Charged Pion
-4 : Neutral Pion
-5 : Charged Kaon
-6 : Neutral Kaon
-7 : Electron
-8 : Muon
-9 : Tau
-10 : (Intended for Neutrino, but can be used for a user-defined particle without errors or unexpected behaviour)
-11 : Photon
-12 : Exotic Hadron (generic, specific exotic hadrons like Eta mesons are free to occupy their own ID's)
+- 0 : Default type
+- 1 : Proton
+- 2 : Neutron
+- 3 : Charged Pion
+- 4 : Neutral Pion
+- 5 : Charged Kaon
+- 6 : Neutral Kaon
+- 7 : Electron
+- 8 : Muon
+- 9 : Tau
+- 10 : (Intended for Neutrino, but can be used for a user-defined particle without errors or unexpected behaviour)
+- 11 : Photon
+- 12 : Exotic Hadron (generic, specific exotic hadrons like Eta mesons are free to occupy their own ID's)
 
 If the user wishes to add a hadron, it may be easier to do so by implementing a new named constructor in ```hadrons.h```, following the process of the named constructors already present to construct a hadron with desired attributes.
 
